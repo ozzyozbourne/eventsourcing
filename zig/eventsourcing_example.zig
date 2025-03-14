@@ -4,14 +4,12 @@ const MAX_STATE_VALUE: f64 = 10_000;
 const MIN_STATE_VALUE: f64 = 0;
 
 const State = struct { value: f64 };
-
 const Command = union(enum) {
     add: f64, 
     sub: f64, 
     mul: f64, 
     div: f64
 };
-
 
 const Event = union(enum) {
     value_added: f64, 
@@ -43,11 +41,9 @@ pub fn event_handler(state: State, event: Event) State {
    };
 }
 
-
 pub fn process(state: State, command: Command) State {
     return event_handler(state, command_handler(state, command));
 }
-
 
 pub fn process_all(initial: State, cmds: []const Command) State {
     var current = initial;
@@ -55,8 +51,7 @@ pub fn process_all(initial: State, cmds: []const Command) State {
     return current;
 }
 
-
-pub fn main() void {
+test "evnets" {
     const initial = State{ .value =  0 };
 
     const cmds = [_]Command{

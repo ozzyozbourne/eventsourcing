@@ -197,3 +197,6 @@ dmypy.json
 go.work
 go.work.sum
     
+
+axonserver
+data
