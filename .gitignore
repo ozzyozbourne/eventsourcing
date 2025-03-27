@@ -164,7 +164,6 @@ dmypy.json
 .spyderproject
 .spyproject
 .ropeproject
-.env
 .venv
 .ipynb_checkpoints
 .webassets-cache
